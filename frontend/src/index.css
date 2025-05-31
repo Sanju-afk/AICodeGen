@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional: Custom styles */
+body {
+  font-family: 'Inter', system-ui, Avenir, Helvetica, Arial, sans-serif;
+  background-color: #f8fafc;
+  /* Tailwind's gray-50 */
+}
+
+/* Custom scrollbar for a modern look */
+::-webkit-scrollbar {
+  width: 8px;
+  background: #e5e7eb;
+  /* Tailwind's gray-200 */
+}
+
+::-webkit-scrollbar-thumb {
+  background: #a5b4fc;
+  /* Tailwind's indigo-200 */
+  border-radius: 4px;
+}

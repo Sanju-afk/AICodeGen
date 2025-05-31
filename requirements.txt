@@ -1,0 +1,55 @@
+# Core web framework
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+
+
+
+# Syntax highlighting
+pygments==2.18.0
+
+# Request/response validation
+pydantic==2.7.1
+
+huggingface_hub
+python-dotenv
+# Cross-origin resource sharing (optional but useful for frontend integration)
+fastapi[all]  # Includes CORS middleware
+
+# Optional testing and dev tools
+httpx==0.27.0   # For API testing
+pytest==8.2.1   # For unit testing
+python-dotenv==1.0.1  # To load .env config
+
+# Optional frontend (for Streamlit or Gradio-based UI)
+streamlit==1.35.0
+gradio==4.29.0
+
+# Use official Python image
+FROM python:3.11-slim
+
+# Set work directory
+WORKDIR /app
+
+# Copy files
+COPY . .
+
+# Install dependencies
+RUN pip install --upgrade pip && pip install -r requirements.txt
+
+# Expose port
+EXPOSE 8000
+
+# Start the FastAPI server
+CMD ["uvicorn", "backend.main:app", "--host", "0.0.0.0", "--port", "8000"]
+fastapi==0.111.0
+uvicorn[standard]==0.29.0
+openai==1.30.1
+pygments==2.18.0
+pydantic==2.7.1
+python-dotenv==1.0.1
+httpx==0.27.0
+pytest==8.2.1
+
+
+#DATABASE
+pip install sqlalchemy psycopg2-binary databases asyncpg
